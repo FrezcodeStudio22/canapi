@@ -1,0 +1,60 @@
+{
+  "name": "canapi",
+  "version": "0.1.0",
+  "description": "API framework for Can apps: Express-powered REST server with TypeORM CRUD, JWT auth, and a reactive client resource layer for @decaspace/can-framework.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diospace/canapi.git"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./server": "./src/server/index.js",
+    "./client": "./src/client/index.js"
+  },
+  "files": [
+    "src",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "can",
+    "can-framework",
+    "canjs",
+    "api",
+    "rest",
+    "express",
+    "typeorm",
+    "http",
+    "crud",
+    "auth"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@decaspace/can-framework": "^1.1.9"
+  },
+  "peerDependenciesMeta": {
+    "@decaspace/can-framework": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.28"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
