@@ -1,6 +1,6 @@
 {
   "name": "@decaspace/canapi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "API framework for Can apps: Express-powered REST server with TypeORM CRUD, JWT auth, and a reactive client resource layer for @decaspace/can-framework.",
   "type": "module",
   "license": "MIT",
