@@ -1,4 +1,4 @@
-# canapi
+# @decaspace/canapi
 
 API framework for Can apps. One npm package, two sides:
 
@@ -8,7 +8,7 @@ API framework for Can apps. One npm package, two sides:
 ## Install
 
 ```bash
-npm install canapi
+npm install @decaspace/canapi
 ```
 
 `express`, `typeorm`, `jsonwebtoken`, and `cors` are optional dependencies installed by default (omit with `--omit=optional` if you only use the client). `@decaspace/can-framework` is an optional peer dependency — the client works without it using a plain fallback.
@@ -16,7 +16,7 @@ npm install canapi
 ## Server
 
 ```js
-import { ApiServer, createAuth, createCrudRouter } from 'canapi/server';
+import { ApiServer, createAuth, createCrudRouter } from '@decaspace/canapi/server';
 import { User } from './entities/User.js';
 
 const server = new ApiServer();
@@ -74,7 +74,7 @@ server.mount('/api/items', createCrudRouter({
 ## Client
 
 ```js
-import { Client, createResource } from 'canapi/client';
+import { Client, createResource } from '@decaspace/canapi/client';
 
 const api = new Client({ baseUrl: 'http://localhost:3001' });
 
@@ -86,7 +86,7 @@ await api.post('/api/todos', { name: 'Ship canapi' });
 ### Reactive resources
 
 ```js
-import { createResource } from 'canapi/client';
+import { createResource } from '@decaspace/canapi/client';
 
 const todos = createResource({ name: 'todo', url: '/api/todos' });
 
